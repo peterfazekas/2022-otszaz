@@ -1,7 +1,6 @@
 package hu.store.model.domain;
 
 import java.util.Map;
-import java.util.stream.Collectors;
 
 public class Cart {
 
@@ -27,4 +26,9 @@ public class Cart {
         return totalValue;
     }
 
+    public long countItemsInCart() {
+        return goods.values().stream()
+                .mapToLong(i -> i)
+                .sum();
+    }
 }
