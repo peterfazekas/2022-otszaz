@@ -42,4 +42,9 @@ public class Cart {
                 .map(i -> i.getValue() + " " + i.getKey())
                 .collect(Collectors.joining("\n"));
     }
+
+    @Override
+    public String toString() {
+        return id + ": " + totalValue;
+    }
 }

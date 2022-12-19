@@ -38,7 +38,10 @@ public class App {
         int count = console.readInt();
         System.out.println("5. feladat");
         System.out.println(cartService.getCartStatisticByGoods(item));
+        System.out.println("6. feladat");
+        System.out.println(cartService.getValueByCount(count));
         System.out.println("7. feladat");
         System.out.println(cartService.getCartContentInDetailsById(id));
+        dataWriter.printAll(cartService.getTotalValue());
     }
 }

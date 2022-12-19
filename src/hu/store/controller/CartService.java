@@ -1,6 +1,7 @@
 package hu.store.controller;
 
 import hu.store.model.domain.Cart;
+import hu.store.model.service.ValueCalculator;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -55,9 +56,26 @@ public class CartService {
     }
 
     /**
+     * 6. feladat
+     */
+    public String getValueByCount(int count) {
+        return String.format("%d darab vételekor fizetendő: %d",
+                count, ValueCalculator.value(count));
+    }
+
+    /**
      * 7. feladat
      */
     public String getCartContentInDetailsById(int id) {
         return getCartById(id).getCartDetails();
+    }
+
+    /**
+     * 8. feladat
+     */
+    public List<String> getTotalValue() {
+        return carts.stream()
+                .map(Cart::toString)
+                .collect(Collectors.toList());
     }
 }
