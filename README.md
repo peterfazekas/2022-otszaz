@@ -58,7 +58,7 @@ jelenítse meg a képernyőn, hogy milyen értéket vár! Az ékezetmentes kiír
 
     b. összesen hány alkalommal vásároltak!
 6. Határozza meg, hogy a bekért darabszámot vásárolva egy termékből mennyi a fizetendő
-   összeg! A feladat megoldásához készítsen függvényt ertek néven, amely a darabszámhoz
+   összeg! A feladat megoldásához készítsen függvényt `ertek` néven, amely a darabszámhoz
    a fizetendő összeget rendeli!
 7. Határozza meg, hogy a bekért sorszámú vásárláskor mely árucikkekből és milyen
    mennyiségben vásároltak! Az árucikkek nevét tetszőleges sorrendben megjelenítheti.

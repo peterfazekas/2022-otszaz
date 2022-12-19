@@ -1,6 +1,7 @@
 package hu.store.model.domain;
 
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class Cart {
 
@@ -30,5 +31,15 @@ public class Cart {
         return goods.values().stream()
                 .mapToLong(i -> i)
                 .sum();
+    }
+
+    public boolean contains(String item) {
+        return goods.containsKey(item);
+    }
+
+    public String getCartDetails() {
+        return goods.entrySet().stream()
+                .map(i -> i.getValue() + " " + i.getKey())
+                .collect(Collectors.joining("\n"));
     }
 }

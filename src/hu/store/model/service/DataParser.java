@@ -41,6 +41,8 @@ public class DataParser {
 
     private Map<String, Long> createGoodsMap(List<String> items) {
         return items.stream()
-                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+                .collect(Collectors.groupingBy(
+                        Function.identity(),
+                        Collectors.counting()));
     }
 }

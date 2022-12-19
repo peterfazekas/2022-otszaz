@@ -36,5 +36,9 @@ public class App {
         String item = console.read();
         System.out.print("Adja meg a vásárolt darabszámot! ");
         int count = console.readInt();
+        System.out.println("5. feladat");
+        System.out.println(cartService.getCartStatisticByGoods(item));
+        System.out.println("7. feladat");
+        System.out.println(cartService.getCartContentInDetailsById(id));
     }
 }
